@@ -1,0 +1,12 @@
+import java.util.regex.*;
+
+public class TimeFinder {
+    public static void main(String[] args) {
+        String input = "Завтрак в 09:00";
+        Pattern pattern = Pattern.compile("\\b(0?[1-9]|1[0-2]):[0-5][0-9]\\b");
+        Matcher matcher = pattern.matcher(input);
+        while (matcher.find()) {
+            System.out.println(matcher.group());
+        }
+    }
+}
